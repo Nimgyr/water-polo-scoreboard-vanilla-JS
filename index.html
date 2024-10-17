@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="dev">
+        <main>
+            <button
+                class="main-button btn"
+                onclick="doSetup('./scoreboard.html')"
+            >
+                открыть табло
+            </button>
+            <div id="all-disabled" class="disabled">
+                <div class="rows-score">
+                    <!-- left board -->
+                    <div class="rows-dev">
+                        <div class="team-name-dev">
+                            <h1 id="left-team-name" class="left-team-dev">
+                                Белые
+                            </h1>
+                            <input
+                                id="left-team"
+                                placeholder="новое название"
+                                size="10"
+                            />
+                            <button onclick="changeLeftTeamName()">
+                                изменить
+                            </button>
+                        </div>
+                        <div class="score-dev">
+                            <div id="score-left">00</div>
+                            <div>
+                                <button
+                                    class="btn-dev"
+                                    onclick="decrementLeftScore()"
+                                >
+                                    -1
+                                </button>
+                                <button
+                                    class="btn-dev"
+                                    onclick="incrementLeftScore()"
+                                >
+                                    +1
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- left board -->
+
+                    <!-- mid row -->
+                    <div class="counters">
+                        <div class="middle-container">
+                            <div class="shot-clock-section">
+                                <div class="container">
+                                    <button class="btn" onclick="shotClock()">
+                                        Время атаки
+                                    </button>
+                                    <button class="btn" onclick="timeout()">
+                                        Тайм-аут
+                                    </button>
+                                    <p id="left-time" class="counter-name">
+                                        Время атаки
+                                    </p>
+                                    <div>
+                                        <p class="counts-dev" id="clock">30</p>
+                                        <button
+                                            class="btn"
+                                            onclick="resetClock20()"
+                                        >
+                                            20
+                                        </button>
+                                        <button
+                                            class="btn"
+                                            onclick="resetClock30()"
+                                        >
+                                            30
+                                        </button>
+                                        <button
+                                            class="btn toggle-btn"
+                                            id="startPause"
+                                        >
+                                            Старт
+                                        </button>
+                                        <button class="btn" id="reset">
+                                            Сбросить
+                                        </button>
+                                    </div>
+                                </div>
+                                <audio
+                                    id="buzzer"
+                                    src="./assets/buzzer_sound.wav"
+                                    preload="auto"
+                                ></audio>
+                            </div>
+
+                            <div class="period">
+                                <p class="counter-name">Период</p>
+                                <p class="counts-dev" id="period-el">01</p>
+                                <button class="btn" onclick="decrementPeriod()">
+                                    -1
+                                </button>
+                                <button class="btn" onclick="incrementPeriod()">
+                                    +1
+                                </button>
+                            </div>
+                        </div>
+                        <div class="timer">
+                            <p class="counter-name">Время</p>
+                            <p class="counts" id="timer_count">10:00</p>
+                            <div class="timer-buttons">
+                                <button
+                                    class="btn toggle-btn"
+                                    id="startPauseDev"
+                                >
+                                    Старт
+                                </button>
+                                <button class="btn" id="resetDev">Сброс</button>
+                                <input
+                                    type="number"
+                                    id="new-time"
+                                    placeholder="новое время(количество минут)"
+                                    size="10"
+                                />
+                                <button onclick="changeTime()">изменить</button>
+                            </div>
+                        </div>
+
+                        <div class="new-game">
+                            <button class="main-button btn" onclick="newGame()">
+                                Новая игра
+                            </button>
+                        </div>
+                    </div>
+                    <!-- mid row -->
+
+                    <!-- right board -->
+                    <div class="rows-dev">
+                        <div class="team-name-dev">
+                            <h1 id="right-team-name" class="right-team-dev">
+                                Синие
+                            </h1>
+                            <input
+                                id="right-team"
+                                placeholder="новое название"
+                                size="10"
+                            />
+                            <button onclick="changeRightTeamName()">
+                                изменить
+                            </button>
+                        </div>
+                        <div class="score-dev">
+                            <div id="score-right">00</div>
+                            <div class="">
+                                <button
+                                    class="btn-dev"
+                                    onclick="decrementRightScore()"
+                                >
+                                    -1
+                                </button>
+                                <button
+                                    class="btn-dev"
+                                    onclick="incrementRightScore()"
+                                >
+                                    +1
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right board -->
+                </div>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>

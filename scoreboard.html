@@ -1,0 +1,60 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Score Board</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <div class="rows-score">
+                <!-- left board -->
+                <div class="left-score">
+                    <h1 id="left-team-name" class="left-team">Белые</h1>
+                    <div class="score-box">
+                        <div class="left-count" id="score-left">00</div>
+                    </div>
+                </div>
+                <!-- left board -->
+
+                <!-- mid row -->
+                <div class="counters">
+                    <div class="competition">
+                        Первенство <br />СШОР по водным видам спорта
+                    </div>
+                    <div class="middle-container">
+                        <div class="shot-clock-section">
+                            <div class="container">
+                                <p id="left-time" class="counter-name">
+                                    Время атаки
+                                </p>
+                                <p class="counts" id="clock">30</p>
+                            </div>
+                        </div>
+
+                        <div class="period">
+                            <p class="counter-name">Период</p>
+                            <p class="counts" id="period-el">01</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- mid row -->
+
+                <!-- right board -->
+                <div class="right-score">
+                    <h1 id="right-team-name" class="right-team">Синие</h1>
+                    <div class="score-box">
+                        <div class="right-count" id="score-right">00</div>
+                    </div>
+                </div>
+                <!-- right board -->
+            </div>
+            <div class="timer">
+                <p class="counter-name">Время</p>
+                <p class="main-counts" id="timer_count">10:00</p>
+                <div class="timer-buttons"></div>
+            </div>
+        </main>
+    </body>
+</html>
