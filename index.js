@@ -15,10 +15,12 @@ let countdownTimerElementDisplayDev;
 let clock;
 let clockDev;
 
-allDisabled = document.getElementById("all-disabled");
+let allDisabled = document.getElementById("all-disabled");
 
 function doSetup() {
     allDisabled.classList.remove("disabled");
+    let openChange = document.getElementById("open-change");
+    openChange.classList.remove("disabled");
     newChildWindow = window.open(
         "./scoreboard.html",
         "New Child Window",
@@ -377,4 +379,25 @@ function newGame() {
     resetTimer();
 
     resetClock();
+}
+
+function openChangeNameOfCompetition() {
+    let changeCompetitionName = document.getElementById("change-comp-name");
+    let saveCompetitionName = document.getElementById("save-comp-name");
+    let openChange = document.getElementById("open-change");
+    openChange.classList.add("none");
+    changeCompetitionName.classList.remove("none");
+    saveCompetitionName.classList.remove("none");
+}
+function changeNameOfCompetition() {
+    let changeCompetitionName = document.getElementById("change-comp-name");
+    let saveCompetitionName = document.getElementById("save-comp-name");
+    let openChange = document.getElementById("open-change");
+    openChange.classList.remove("none");
+    changeCompetitionName.classList.add("none");
+    saveCompetitionName.classList.add("none");
+
+    let competitionName = document.getElementById("change-comp-name").value;
+    newChildWindow.document.getElementById("competition-name").textContent =
+        competitionName;
 }

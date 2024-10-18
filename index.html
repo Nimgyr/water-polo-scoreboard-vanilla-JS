@@ -8,12 +8,35 @@
     </head>
     <body class="dev">
         <main>
-            <button
-                class="main-button btn"
-                onclick="doSetup('./scoreboard.html')"
-            >
-                открыть табло
-            </button>
+            <div class="flex">
+                <button
+                    class="main-button btn"
+                    onclick="doSetup('./scoreboard.html')"
+                >
+                    открыть табло
+                </button>
+                <button
+                    id="open-change"
+                    class="dop-btn btn disabled"
+                    onclick="openChangeNameOfCompetition()"
+                >
+                    Изменить название соревнования
+                </button>
+                <textarea
+                    placeholder="Новое название"
+                    id="change-comp-name"
+                    rows="3"
+                    cols="40"
+                    class="none"
+                ></textarea>
+                <button
+                    id="save-comp-name"
+                    class="btn height-65 none"
+                    onclick="changeNameOfCompetition()"
+                >
+                    ✓
+                </button>
+            </div>
             <div id="all-disabled" class="disabled">
                 <div class="rows-score">
                     <!-- left board -->

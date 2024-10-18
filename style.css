@@ -36,14 +36,14 @@ h1 {
 .left-team {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     white-space: nowrap;
-    font-size: 50px;
+    font-size: 80px;
     color: #ffffff;
 }
 
 .right-team {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     white-space: nowrap;
-    font-size: 50px;
+    font-size: 80px;
     color: #009eec;
 }
 .counter-name {
@@ -52,13 +52,14 @@ h1 {
 }
 
 .score-box {
-    width: 350;
-    font-size: 200px;
+    width: 400;
+    font-size: 250px;
     font-family: "Digital Numbers Regular";
     font-weight: normal;
     color: #eaff09;
     background: black;
-    padding: 50px 20px;
+    padding: 30px 20px;
+    margin: 20px;
     border-radius: 50px;
 }
 
@@ -117,6 +118,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 60px;
 }
 
 .middle-container {
@@ -138,10 +140,9 @@ p {
     align-items: center;
     justify-content: center;
 }
-.timer-name {
-}
+
 .main-counts {
-    font-size: 250px;
+    font-size: 300px;
     font-family: "Digital Numbers Regular";
     font-weight: normal;
     margin-left: auto;
@@ -207,10 +208,41 @@ p {
 }
 
 .main-button {
+    margin: 20px;
+    height: 65px;
     min-width: 200px;
-    margin: 20px 0px;
-    font-size: 30px;
+    font-size: 25px;
 }
 .toggle-btn {
     width: 80px;
+}
+
+.dop-btn {
+    margin: 20px;
+    height: 65px;
+    width: 250px;
+    font-size: 20px;
+}
+.flex {
+    display: flex;
+    width: 750px;
+}
+
+.flex textarea {
+    font-size: 16px;
+    color: white;
+    padding: 7px;
+    margin: 20px;
+    height: 47.8px;
+    resize: none;
+    border: white 2px solid;
+    background: black;
+    border-radius: 20px;
+}
+.height-65 {
+    margin: 20px 0;
+    height: 65px;
+}
+.none {
+    display: none;
 }
